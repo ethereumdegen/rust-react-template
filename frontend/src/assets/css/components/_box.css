@@ -1,0 +1,6 @@
+@layer components {
+    .box {
+        box-shadow: 0px 3px 5px #0000000b;
+        @apply rounded-lg border border-slate-200 dark:border-darkmode-500;
+    }
+}

@@ -1,0 +1,99 @@
+{
+  "name": "tempoai-frontend",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 8080",
+    "server": "npx ts-node server.mjs",
+    "build-dev": "NODE_OPTIONS=--max-old-space-size=4096 NODE_ENV=development vite build",
+    "build-prod": "NODE_OPTIONS=--max-old-space-size=4096 NODE_ENV=production vite build",
+    "build:dev": "NODE_OPTIONS=--max-old-space-size=4096 NODE_ENV=development vite build",
+    "build:prod": "NODE_OPTIONS=--max-old-space-size=4096 NODE_ENV=production vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-balloon": "^29.1.0",
+    "@ckeditor/ckeditor5-build-balloon-block": "^29.1.0",
+    "@ckeditor/ckeditor5-build-classic": "^29.1.0",
+    "@ckeditor/ckeditor5-build-decoupled-document": "^29.1.0",
+    "@ckeditor/ckeditor5-build-inline": "^29.1.0",
+    "@fullcalendar/core": "^5.5.1",
+    "@fullcalendar/daygrid": "^5.5.0",
+    "@fullcalendar/interaction": "^5.5.0",
+    "@fullcalendar/list": "^5.5.0",
+    "@fullcalendar/timegrid": "^5.5.1",
+    "@headlessui/react": "^1.6.6",
+    "@hookform/resolvers": "^2.8.8",
+    "@left4code/tw-starter": "^3.1.35",
+    "@popperjs/core": "^2.7.0",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@reduxjs/toolkit": "^1.9.1",
+    "animate.css": "^4.1.1",
+    "axios": "^1.2.2",
+    "chart.js": "^3.7.1",
+    "classnames": "^2.3.1",
+    "clsx": "^1.2.1",
+    "dayjs": "^1.10.4",
+    "dropzone": "^5.7.6",
+    "ethereum-blockies-base64": "^1.0.2",
+    "ethers": "^5.7.2",
+    "highlight.js": "^10.6.0",
+    "js-beautify": "^1.13.5",
+    "litepicker": "^2.0.11",
+    "lucide": "^0.17.2",
+    "lucide-react": "^0.37.0",
+    "mobx": "^6.7.0",
+    "mobx-react": "^7.6.0",
+    "payspec-js": "^0.32.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-hook-form": "^7.29.0",
+    "react-router-dom": "^6.3.0",
+    "react-transition-group": "^4.4.2",
+    "recoil": "^0.7.0",
+    "simplebar": "^5.3.6",
+    "tabulator-tables": "^4.9.3",
+    "tailwind-merge": "^1.6.0",
+    "tailwind-styled-components": "^2.2.0",
+    "tiny-slider": "^2.9.3",
+    "tippy.js": "^6.2.7",
+    "toastify-js": "^1.9.3",
+    "tom-select": "^1.7.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "xlsx": "^0.16.9",
+    "yup": "^0.32.11",
+    "zoom-vanilla.js": "^2.0.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.1",
+    "@vitejs/plugin-react": "^1.3.0",
+    "autoprefixer": "10.4.6",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.5",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.7.2",
+    "vite-plugin-react-markdown": "^0.2.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+DROP DOMAIN bytes32;

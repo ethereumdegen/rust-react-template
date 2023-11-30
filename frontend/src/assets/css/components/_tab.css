@@ -1,0 +1,15 @@
+@layer components {
+    .nav {
+        &.nav-boxed-tabs {
+            @apply p-1 border border-slate-200 rounded-lg dark:border-darkmode-400;
+            .nav-item {
+                .nav-link {
+                    @apply shadow-none py-1 dark:border-transparent;
+                    &.active {
+                        @apply bg-transparent text-slate-700 border border-slate-200 bg-slate-50 dark:text-slate-300 dark:bg-darkmode-400 dark:border-darkmode-400;
+                    }
+                }
+            }
+        }
+    }
+}

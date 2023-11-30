@@ -1,0 +1,45 @@
+.report-box {
+    @apply relative;
+    &:before {
+        content: "";
+        width: 96%;
+        box-shadow: 0px 3px 5px #0000000b;
+        @apply h-full bg-slate-50 border border-slate-200 mt-3 absolute rounded-lg mx-auto inset-x-0 dark:bg-darkmode-600/70 dark:border-darkmode-500/60;
+    }
+    .report-box__item {
+        @apply relative;
+        @include media-breakpoint-up(xl) {
+            &:not(:last-child) {
+                &:before {
+                    content: "";
+                    @apply w-[13px] h-[12px] absolute rounded-full bg-slate-200 top-0 right-0 -mr-[7px] -mt-[25px] dark:bg-darkmode-500;
+                }
+                &:after {
+                    content: "";
+                    @apply w-[11px] h-[14px] absolute rounded-full bg-slate-100 top-0 right-0 -mr-[6px] -mt-[28px] dark:bg-darkmode-700;
+                }
+                .report-box__content {
+                    &:before {
+                        content: "";
+                        @apply w-[13px] h-[12px] absolute rounded-full bg-slate-200 bottom-0 right-0 -mr-[7px] -mb-[25px] dark:bg-darkmode-700/60;
+                    }
+                    &:after {
+                        content: "";
+                        @apply w-[11px] h-[14px] absolute rounded-full bg-slate-50 bottom-0 right-0 -mr-[6px] -mb-[28px] dark:bg-darkmode-600;
+                    }
+                }
+            }
+        }
+        .report-box__item__icon {
+            width: 2.2rem;
+            height: 2.2rem;
+            svg {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+        .report-box__item__indicator {
+            @apply flex pl-2 items-center;
+        }
+    }
+}

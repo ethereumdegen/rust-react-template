@@ -1,0 +1,20 @@
+.notification {
+    @apply relative text-white/70;
+    .notification__icon {
+        @apply w-5 h-5;
+    }
+    &.notification--bullet {
+        &:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            @apply rounded-full absolute top-[-2px] right-0 bg-white opacity-50 animate-ping;
+        }
+        &:after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            @apply rounded-full absolute top-[-2px] right-0 bg-danger;
+        }
+    }
+}

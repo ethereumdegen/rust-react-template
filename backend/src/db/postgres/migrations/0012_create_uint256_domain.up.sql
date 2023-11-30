@@ -1,0 +1,1 @@
+CREATE DOMAIN uint256 AS varchar(255);

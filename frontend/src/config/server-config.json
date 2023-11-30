@@ -1,0 +1,12 @@
+{
+    "development":{
+        "backendServerUrl":"http://localhost:9000"
+    },
+    "staging":{
+        "backendServerUrl":"https://api.tempova.com"
+    },
+    "production":{
+        "backendServerUrl":"https://api.tempova.com"
+    } 
+
+}

@@ -1,0 +1,35 @@
+.content-layers-pop {
+    margin-top: 2.2rem;
+    border-radius: 1.6rem;
+    @apply w-full min-h-screen relative bg-slate-100 px-6 pt-0.5 pb-6 dark:bg-darkmode-700;
+    @include media-breakpoint-down(sm) {
+        @apply px-4;
+    }
+    &:before {
+        content: "";
+        width: 96.5%;
+        z-index: -1;
+        margin-top: -0.87rem;
+        border-radius: 1.6rem;
+        @apply mx-auto h-20 bg-white/[0.2] absolute top-0 inset-x-0 dark:bg-darkmode-100/[0.2];
+    }
+    &:after {
+        content: "";
+        width: 92.5%;
+        z-index: -2;
+        margin-top: -1.76rem;
+        border-radius: 1.6rem;
+        @apply mx-auto h-20 bg-white/[0.15] absolute top-0 inset-x-0 dark:bg-darkmode-100/[0.15];
+    }
+}
+
+.content {
+    margin-top: 2.2rem;
+    border-radius: 1.6rem;
+    @apply w-full min-h-screen relative bg-slate-100 px-6 pt-0.5 pb-6 dark:bg-darkmode-700;
+    @include media-breakpoint-down(sm) {
+        @apply px-4;
+    }
+    
+}
+

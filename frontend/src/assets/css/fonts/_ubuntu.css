@@ -1,0 +1,16 @@
+ 
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Ubuntu-Regular"), local("Ubuntu-Regular"),
+    url('@/assets/fonts/ubuntu/Ubuntu-Regular.ttf')
+      format("ttf");
+ 
+}
+
+
+.font-ubuntu {
+  font-family: 'Ubuntu', Fallback, sans-serif;
+}

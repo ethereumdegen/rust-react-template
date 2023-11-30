@@ -1,0 +1,7 @@
+@layer components {
+    .dropdown-menu {
+        .dropdown-content {
+            @apply box rounded-lg;
+        }
+    }
+}

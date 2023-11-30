@@ -1,0 +1,17 @@
+html {
+    @apply bg-primary bg-gradient-to-b from-primary via-primary/70 to-black/30 min-h-screen;
+    &.dark {
+        @apply bg-darkmode-700 from-darkmode-800 via-darkmode-800/70;
+        body {
+            @apply text-slate-300;
+            *,
+            ::before,
+            ::after {
+                @apply border-white/5;
+            }
+        }
+    }
+    body {
+        @apply antialiased font-roboto text-sm text-slate-700;
+    }
+}

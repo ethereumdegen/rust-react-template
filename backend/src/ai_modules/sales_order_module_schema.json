@@ -1,0 +1,60 @@
+
+
+[
+    {
+      "name": "add_sales_order_entry",
+      "description": "adds a new sales order into the business system database",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "company_name": {
+            "type": "string",
+            "description": "The name of the company who is purchasing"
+          },
+          "order_entries": {
+            "type": "array",
+            "description": "An array of order entries",
+            "items": {
+              "type": "object",
+              "properties": {
+                "SKU": {
+                  "type": "string",
+                  "description": "The SKU identifier"
+                },
+                "quantity": {
+                  "type": "integer",
+                  "description": "The quantity of the item"
+                }
+              },
+              "required": ["SKU", "quantity"]
+            }
+          }
+        },
+        "required": ["company_name"]
+      }
+    },
+    {
+      "name": "find_sales_orders",
+      "description": "performs a business system database search to find past sales orders",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "company_name": {
+            "type": "string",
+            "description": "The name of the company who did the purchasing"
+          },
+          "start_datetime": {
+            "type": "integer",
+            "description": "The datetime in utc unix seconds at which all returned queried orders should be created after"
+          },
+          "end_datetime": {
+            "type": "integer",
+            "description": "The datetime in utc unix seconds at which all returned queried orders should be created before"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+
+  

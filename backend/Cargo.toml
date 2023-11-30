@@ -1,0 +1,108 @@
+[package]
+name = "tempo_ai_backend"
+version = "0.1.0"
+edition = "2021"
+default-run="server"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+ethers = "2.0.10"
+reqwest = "0.11.22"
+ 
+
+tokio-postgres-migration = "0.1.0"
+tokio-postgres = { version = "0.7.8" ,  features=["with-chrono-0_4"] } 
+tokio = { version = "1.28.1", features = ["rt", "rt-multi-thread", "macros"] }
+actix-web = "4.4.0"
+actix-cors = "0.6.4"
+actix-multipart = "0.6.1"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0.49"
+env_logger = "0.10.0"
+log = "0.4.18"
+
+
+inquire = "0.6.2"
+chrono = "0.4.31"
+hex = "0.4.3"
+bytes = "1.5.0"
+ethabi = "18.0.0"
+ 
+degen-sql = "0.1.4"
+oauth2 = "4.4.2"
+base64 = "0.21.4"
+dotenvy = "0.15"
+url = "2.4.1"
+rand = "0.8.5"
+uuid = { version = "1.4.1", features = ["v4","fast-rng"] }
+  
+
+
+
+[lib]
+name = "tempo_backend"
+
+# cargo run --bin migrate
+[[bin]]
+name = "migrate"
+path = "src/db/postgres/scripts/migrate.rs"
+
+[[bin]]
+name = "rollback_full"
+path = "src/db/postgres/scripts/rollback_full.rs"
+
+
+
+  
+ 
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+
+ [[bin]]
+name = "sales_order"
+path = "src/scripts/sales_order_entry.rs"
+ 
+ 
+ 
+[[bin]]
+name = "shopify_oauth_get_code"
+path = "src/scripts/shopify_oauth_get_code.rs"
+ 
+ 
+[[bin]]
+name = "shopify_oauth_get_token"
+path = "src/scripts/shopify_oauth_get_token.rs"
+ 
+
+
+[[bin]]
+name = "twitter_oauth_get_code"
+path = "src/scripts/twitter_oauth_get_code.rs"
+ 
+ 
+[[bin]]
+name = "twitter_oauth_get_token"
+path = "src/scripts/twitter_oauth_get_token.rs"
+ 
+
+[[bin]]
+name = "indiefuture_oauth_get_code"
+path = "src/scripts/indiefuture_oauth_get_code.rs"
+  
+
+
+[[bin]]
+name = "google_oauth_code"
+path = "src/scripts/google_oauth_get_code.rs"
+
+
+[[bin]]
+name = "google_oauth_token"
+path = "src/scripts/google_oauth_get_token.rs"

@@ -1,0 +1,23 @@
+.wrapper {
+    @apply min-w-0 h-screen overflow-y-auto overflow-x-hidden flex-1 pb-6 pr-6;
+    @include media-breakpoint-down(xl) {
+        @apply ml-0 px-4 max-w-full;
+    }
+    @include media-breakpoint-down(sm) {
+        @apply px-3;
+    }
+    &.wrapper--simple {
+        margin-left: 112px;
+        @apply pl-0;
+        @include media-breakpoint-down(xl) {
+            @apply ml-0 px-4;
+        }
+        @include media-breakpoint-down(sm) {
+            @apply px-3;
+        }
+    }
+    &:before {
+        content: "";
+        @apply w-full h-px block;
+    }
+}

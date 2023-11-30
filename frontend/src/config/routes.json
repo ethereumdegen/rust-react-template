@@ -1,0 +1,36 @@
+[
+  {
+    "type": "get",
+    "uri": "/api/chat",
+    "method": "chat_input",
+    "controller": "chat"
+  },
+  
+ 
+  {
+    "type": "post",
+    "uri": "/api/command/confirm",
+    "method": "confirm_command",
+    "controller": "command"
+  },
+
+
+  {
+    
+    "type": "get",
+    "uri": "/api/oauth2/indiefuture/init",
+    "method": "oauth_indiefuture_init",
+    "controller": "oauth"
+  },
+
+  {
+      
+    "type": "get",
+    "uri": "/api/oauth2/twitter/init",
+    "method": "oauth_twitter_init",
+    "controller": "oauth"
+       
+  } 
+
+  
+]

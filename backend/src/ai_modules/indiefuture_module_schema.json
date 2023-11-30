@@ -1,0 +1,95 @@
+
+
+[
+    {
+      "name": "FindProducts",
+      "description": "Performs a product database lookup to retrieve data about many products that are in the users shop",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "in_stock": {
+            "type": "boolean",
+            "description": "If this parameter is present, it filters for only products that are in stock (true) or only that are out of stock (false)"
+          } 
+           
+        },
+        "required": [ ]
+      }
+    } ,
+    
+    {
+      "name": "FindProduct",
+      "description": "Performs a product database lookup to retrieve data about a single specific product",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "the product sku or the product database id as a string"
+          } 
+           
+        },
+        "required": ["product_id" ]
+      }
+    } ,
+
+    {
+      "name": "FindClassifications",
+      "description": "Performs a database lookup to find all of the product classifications",
+      "parameters": { 
+        "type": "object",
+        "properties": {
+          
+        },
+        "required": []
+      },
+      "required": [  ]
+      
+    },
+
+    
+    {
+      "name": "UpdateProduct",
+      "description": "Performs a product database update to change data about a specific product selected by SKU or product id  ",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "the product sku or the product database id as a string"
+          },
+          "product_data":{
+            "type": "object",
+            "properties": {
+              "title":{
+                "type":"string",
+                "description": "The name for the product. "
+              },
+              "description_short":{
+                "type":"string",
+                "description": "The description for the product. "
+              },
+              "enabled":{
+                "type":"boolean",
+                "description": "Controls whether or not the product is enabled and thus visible on the store and able to be purchased "
+              }, 
+              "days_to_ship_expected":{
+                "type":"number",
+                "description": "The expected number of days that it will take to ship this product.  This is controlled by the vendor as they know how long it will take them to ship a particular product on average.  "
+              }
+
+
+
+            },
+            "required": []
+
+          }
+           
+        },
+        "required": ["product_id" ]
+      }
+    }
+    
+  ]
+
+  

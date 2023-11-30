@@ -1,0 +1,29 @@
+
+.rainbow-underline{
+    position: relative;
+}
+.rainbow-underline:before{
+    content: "";
+    position: absolute;
+    height: 0.1em;
+    padding: 0.1em;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        #fd004c,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7
+    );
+    background-size: 200% 100%;
+    bottom: -0.1em;
+    left: -0.1em;
+    transition: 1.5s;
+    opacity: 0;
+}
+.rainbow-underline:hover:before{
+    background-position: 100% 0;
+    opacity: 50;
+}

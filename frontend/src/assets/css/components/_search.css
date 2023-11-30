@@ -1,0 +1,9 @@
+.search {
+    @apply relative mt-1;
+    .search__input {
+        @apply w-80 shadow-none rounded-full text-slate-200 border-transparent bg-white/[0.11] pl-3.5 pr-8 transition-[width] duration-300 ease-in-out placeholder:text-slate-400 focus:border-transparent dark:bg-darkmode-400/70;
+    }
+    .search__icon {
+        @apply w-5 h-5 absolute my-auto inset-y-0 mr-3 right-0 text-slate-400 dark:text-slate-500;
+    }
+}
