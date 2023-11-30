@@ -28,7 +28,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "tempoai-frontend",
+    "name": "template-frontend",
     "version": "0.2.0",
     "private": true,
     "scripts": {

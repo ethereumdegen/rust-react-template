@@ -2,9 +2,9 @@ import favicon from "@/assets/images/vector_waves_logo.png";
 import homeImage from "@/assets/images/vector_waves_2.png";
 
 const config = {
-  title: "Tempo Virtual Assistant",
-  tagline: "Performing traditional enterprise infrastructure tasks with AI chat",
-  url: "https://tempova.com",
+  title: "Rust React Template",
+  tagline: "Kickstart development of your next webapp",
+  url: "http://localhost:8080",
   baseURL: "/",
   favicon: favicon,
   homeImage: homeImage,

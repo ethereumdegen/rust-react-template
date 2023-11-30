@@ -5,3 +5,5 @@ pub mod openai;
 
 pub mod oauth;
 pub mod rand;
+
+pub mod auth_scopes;

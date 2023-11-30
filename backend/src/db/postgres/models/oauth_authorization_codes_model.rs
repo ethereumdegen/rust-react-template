@@ -2,8 +2,12 @@ use std::str::FromStr;
 
 use tokio_postgres::{Row};
 
-use super::super::postgres_db::Database;
-use super:: PostgresModelError;
+
+use degen_sql::db::postgres::postgres_db::Database;
+
+use degen_sql::db::postgres::models::model::PostgresModelError;
+
+
 
 //use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 use chrono::{DateTime, Duration, Utc};

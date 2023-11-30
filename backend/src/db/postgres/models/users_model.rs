@@ -6,8 +6,9 @@ use tokio_postgres::{Row};
 
 use crate::db::postgres::domains::eth_address::DomainEthAddress;
 
-use crate::db::postgres::postgres_db::Database;
-use crate::db::postgres::models:: PostgresModelError;
+use degen_sql::db::postgres::postgres_db::Database;
+use degen_sql::db::postgres::models::model::PostgresModelError;
+
 use super::JoinQueryRow;
 use super::access_tokens_model::AccessTokensModel;
 
@@ -37,7 +38,7 @@ impl User {
             name: row.try_get("name").ok(),
             roles: convert_roles_string_to_array ( row.try_get::<_,String>("roles").ok() ),
             public_address: Address::from_str(&address)
-                .map_err(|_e| PostgresModelError::AddressParseError)?,
+                .map_err(|_e| PostgresModelError::RowParseError)?,
         })
     }
     
@@ -52,7 +53,7 @@ impl User {
             name: row.try_get(format!("{}_name", prefix).as_str()).ok(),
             roles:  convert_roles_string_to_array ( row.try_get::<_,String>(format!("{}_roles", prefix).as_str()).ok() ),
             public_address: Address::from_str(&address)
-                .map_err(|_e| PostgresModelError::AddressParseError)?,
+                .map_err(|_e| PostgresModelError::RowParseError)?,
         })
     }
     

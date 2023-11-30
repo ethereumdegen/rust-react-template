@@ -145,7 +145,7 @@ function Main() {
 
           <div className=" mt-2 mb-5 ">
             <div className="text-xl   my-2 ">
-            Connect TempoVA to an Application
+            Connect to an Application
 
             </div>
           </div>

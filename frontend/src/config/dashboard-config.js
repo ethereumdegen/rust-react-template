@@ -4,7 +4,7 @@ import favicon from '@/assets/images/warp.gif'
 import homeImage from '@/assets/images/degen_tx_banner.png'
 
 const config = {
-    title: 'Tempo AI',
+    title: 'Rust React Template',
     
     favicon: favicon,
     homeImage: homeImage,

@@ -3,10 +3,10 @@
         "backendServerUrl":"http://localhost:9000"
     },
     "staging":{
-        "backendServerUrl":"https://api.tempova.com"
+        "backendServerUrl":"https://api.???.com"
     },
     "production":{
-        "backendServerUrl":"https://api.tempova.com"
+        "backendServerUrl":"https://api.???.com"
     } 
 
 }

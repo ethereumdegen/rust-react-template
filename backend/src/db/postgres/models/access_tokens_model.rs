@@ -2,8 +2,9 @@ use std::str::FromStr;
 
 use tokio_postgres::{Row};
 
-use super::super::postgres_db::Database;
-use super:: PostgresModelError;
+
+use degen_sql::db::postgres::postgres_db::Database;
+use degen_sql::db::postgres::models::model::PostgresModelError;
 
 //use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 use chrono::{DateTime, Duration, Utc};
@@ -40,7 +41,7 @@ impl AccessToken {
 
         Ok(Self {
             public_address: Address::from_str(&address)
-                .map_err(|_e| PostgresModelError::AddressParseError)?,
+                .map_err(|_e| PostgresModelError::RowParseError)?,
             auth_token: row.get::<_, String>("token"),
             parent_client_id: row.try_get("parent_client_id").ok(),
             scopes: AuthScopes::new_from_opt_string(  row.try_get::<_, String>("scopes").ok() ).to_vec(),

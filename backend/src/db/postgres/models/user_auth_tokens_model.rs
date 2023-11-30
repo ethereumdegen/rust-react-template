@@ -2,8 +2,7 @@ use std::str::FromStr;
 
 use tokio_postgres::{Row};
 
-use super::super::postgres_db::Database;
-use super:: PostgresModelError;
+ 
 
 //use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 use chrono::{DateTime, Duration, Utc};
@@ -12,15 +11,23 @@ use crate::{db::postgres::domains::eth_address::DomainEthAddress, util::auth_sco
 use crate::types::chronodatetime::ChronoDateTime;
 use crate::util::rand::generate_random_uuid;
 
+
+use super::{JoinQueryRow,expand_join_query_rows};
+
 use serde::{Serialize};
 
 use ethers::types::Address;
 use ethers::utils::to_checksum;
 
 use super::users_model::{UsersModel };
-use crate::db::postgres::models::{expand_join_query_rows,JoinQueryRow}; 
-
  
+use super::oauth_authorization_codes_model::{OAuthAuthorizationCode};
+ 
+use degen_sql::db::postgres::postgres_db::Database;
+
+use degen_sql::db::postgres::models::model::PostgresModelError;
+
+
 
 #[derive(Serialize)]
 pub struct UserAuthToken {

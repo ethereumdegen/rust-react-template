@@ -14,14 +14,7 @@
     "controller": "command"
   },
 
-
-  {
-    
-    "type": "get",
-    "uri": "/api/oauth2/indiefuture/init",
-    "method": "oauth_indiefuture_init",
-    "controller": "oauth"
-  },
+ 
 
   {
       

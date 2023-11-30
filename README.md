@@ -1,13 +1,12 @@
-### Flex Monorepo 
-
-1. this is a pure r&d repo!! wooo lets fucking GO my brotha
-
-    a. oauth with google
-    b. chat gpt ai used to build shit with fabric js 
+### Rust React Webapp Template Monorepo 
 
 
+## run the backend 
+
+cargo run 
 
 
-### Helpful commands 
+## run the frontend 
 
-http://localhost:9000/api/oauth2/google/init
+yarn dev 
+
